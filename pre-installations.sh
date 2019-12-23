@@ -68,7 +68,8 @@ cp -a unicode.mapping /etc/ngins/modsec/
 systemctl enable nginx
 systemctl start nginx
 
-firewall-cmd --add-service=http --permanent
-firewall-cmd --reload
+## Unhash these lines incase you don't use any iptables interface/controller other than firewalld, and whatever you use enable http and https services.
+#firewall-cmd --add-service=http --permanent
+#firewall-cmd --reload
 
 
